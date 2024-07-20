@@ -1,0 +1,195 @@
+@checkbox-check-color: #373b46; 
+@checkbox-border-color: #373b46; 
+
+
+.open-news-container {
+  height: 100%;
+  padding-bottom: 40px;
+  h1{
+    text-align: center;
+    margin-top: 48px;
+  }
+  .spin-style {
+    > .ant-spin {
+      min-height: calc(100vh - 170px);
+    }
+  }
+  .panel-loading {
+    min-height: 180px;
+    .ant-spin-dot > .ant-spin-dot-item {
+      background-color: #323137;
+    }
+  }
+  .open-news-header {
+    width: 100%;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f6f7f9;
+    .open-news-paragraph {
+      margin: 14px 0;
+      font-size: 12px;
+      color: #666;
+    }
+    .powered-box {
+      display: flex;
+      align-items: center;
+      p {
+        margin: 0 8px;
+      }
+    }
+    .powered-items {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      justify-content: center;
+      .powered-by-item {
+        height: 28px;
+        padding: 0 8px;
+        color: #333;
+        font-family: "NexaTextBold";
+        text-align: center;
+        line-height: 28px;
+        background: #ffffff;
+      }
+    }
+  }
+  .result-list {
+    width: 1000px;
+    min-height: calc(100% - 170px);
+    margin: 0 auto;
+    padding: 45px 0 0;
+    .time-range {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      justify-content: center;
+      font-size: 32px;
+      font-family: "NexaTextBold";
+      .time-btn {
+        user-select: none;
+        width: 40px;
+        height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          background-color: #f6f7f9;
+          border-radius: 4px;
+        }
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+    .top-news-title {
+      margin: 48px 0 32px;
+      height: 20px;
+      font-size: 24px;
+      font-family: "NexaTextBold";
+      color: #2c00ff;
+      line-height: 20px;
+    }
+    .panel-box {
+      color: #333;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 12px;
+      height: 28px;
+      line-height: 28px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .end-line {
+    color: #666666;
+    font-size: 12px;
+    height: 80px;
+    display: flex;
+    line-height: 80px;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    .width-80-line {
+      display: inline-block;
+      height: 1px;
+      width: 80px;
+      background-color: #d9d9d9;
+    }
+  }
+}
+
+.single-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  white-space: nowrap; 
+}
+
+
+@media screen and (max-width: 450px) {
+  .open-news-container {
+    .open-news-header {
+      > img {
+        width: 172px;
+        height: 32px;
+      }
+      .open-news-paragraph {
+        width: 300px;
+        text-align: center;
+        margin: 14px auto;
+      }
+    }
+    .result-list {
+      width: 100%;
+
+      padding: 32px 12px 0;
+      .time-range {
+        gap: 32px;
+        p {
+          font-size: 24px;
+        }
+      }
+      .collapse-list {
+        .ant-collapse-header-text {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          padding-right: 20px;
+          -webkit-box-orient: vertical;
+        }
+        .empty-box {
+          min-height: 200px;
+          font-size: 14px;
+          color: #999;
+          img {
+            margin-bottom: 24px;
+          }
+        }
+      }
+
+      .top-news-title {
+        font-size: 16px;
+        margin: 28px 0 16px;
+      }
+      .article {
+        margin: 8px 0px 8px 10px !important;
+        text-indent: 0em;
+      }
+      .single-hidden {
+        height: fit-content !important;
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        text-indent: 0em !important;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+}
